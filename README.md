@@ -23,8 +23,8 @@ From the universal approach, we derived the following process:
 
 Now we have two problems:
 
-* how to capture a screenshot of the website ([captureVisibleTab()](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab) via a browser extension, [getScreenshotAs](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/TakesScreenshot.html) via Selenium, etc.)
-* how to resolve found bounding boxes to useful information (this is definitely not trivial).
+* how to capture a screenshot of the website ([captureVisibleTab](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab) via a browser extension, [getScreenshotAs](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/TakesScreenshot.html) via Selenium, etc.)
+* how to resolve found bounding boxes to useful information (this is definitely not trivial, this part is resolved in this project by the [element extractor](html2llm/src/element-extractor/element-extractor.ts)).
 
 This project is on a very early stage.
 

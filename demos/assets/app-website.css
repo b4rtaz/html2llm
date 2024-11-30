@@ -142,7 +142,7 @@ a {
 	}
 }
 
-a.link {
+.btn {
 	display: inline-block;
 	padding: 13px 30px;
 	border-radius: 15px;
@@ -152,20 +152,20 @@ a.link {
 		opacity 0.2s;
 	outline: 0;
 }
-a.link:hover {
+.btn:hover {
 	opacity: 0.8;
 }
-a.link.primary {
+.btn.primary {
 	color: #fff;
 	background: #0eccd1;
 	background: linear-gradient(90deg, #0eccd1 0%, #2290b4 100%);
 }
-a.link.secondary {
+.btn.secondary {
 	color: #337a86;
 	background: #90ebec;
 	background: linear-gradient(90deg, #90ebec 0%, #98d5e2 100%);
 }
-a.link.white {
+.btn.white {
 	color: #000;
 	background: #fff;
 	background: linear-gradient(90deg, #fff 0%, #e0fffd 100%);
@@ -238,6 +238,12 @@ section.app .info p {
 	padding: 5px 0;
 	line-height: 1.5em;
 }
+section.app .info p a {
+	text-decoration: underline;
+}
+section.app .info p a:hover {
+	text-decoration: none;
+}
 section.app .info ul.links {
 	padding-top: 30px;
 }
@@ -291,6 +297,18 @@ section.contact h3 {
 section.contact p {
 	padding: 5px 0;
 	line-height: 1.5em;
+}
+section.contact label {
+	display: block;
+	padding: 0 0 10px;
+}
+section.contact input[type='text'],
+section.contact textarea {
+	width: 300px;
+	background: #fff;
+	padding: 8px;
+	border: 0;
+	border-radius: 5px;
 }
 section.contact div.link {
 	padding-top: 25px;

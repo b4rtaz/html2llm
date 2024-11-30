@@ -31,13 +31,20 @@
 					<h3>📺 App Website</h3>
 
 					<p>
-						This demo shows how the html2llm detects the UI elements on the page. Internally it uses the html-to-image to take a
-						screenshot of the page and then it uses the html2llm to detect the UI elements. This method is not good in real
-						world scenarios, but it is a good way to simple test the parser in this tiny demo.
+						This demo demonstrates how html2llm detects the UI elements on a page. Internally, it uses the
+						<a href="https://github.com/bubkoo/html-to-image">html-to-image</a> library to capture a screenshot of the page and
+						then processes it with html2llm to detect the UI elements.
+					</p>
+					<p>
+						While using the html-to-image method for screenshots is not ideal for real-world scenarios, it serves as a simple
+						way to test the parser in this small demo.
 					</p>
 
 					<ul class="links">
-						<li><a href="https://github.com/b4rtaz/html2llm" class="link primary" target="_blank">GitHub</a></li>
+						<li><a href="https://github.com/b4rtaz/html2llm" class="btn primary" target="_blank">GitHub Repository</a></li>
+						<li>
+							<a href="https://github.com/b4rtaz/html2llm/issues" class="btn secondary" target="_blank">Create New Issue</a>
+						</li>
 					</ul>
 				</div>
 				<div class="preview">
@@ -48,12 +55,19 @@
 
 		<section class="contact">
 			<div class="container">
-				<h3>Any bug?</h3>
+				<h3>Test Form</h3>
 
-				<p>Don't wait! Create a new issue today.</p>
+				<p>
+					<label for="username">Username</label>
+					<input name="username" type="text" aria-label="Username" />
+				</p>
+				<p>
+					<label for="username">Message</label>
+					<textarea name="message" aria-label="Message"></textarea>
+				</p>
 
 				<div class="link">
-					<a href="https://github.com/b4rtaz/html2llm/issues" class="link white" target="_blank">Create Issue</a>
+					<button class="btn white" target="_blank">Send</button>
 				</div>
 			</div>
 		</section>
