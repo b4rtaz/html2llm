@@ -27,8 +27,14 @@ h1 {
 	margin: 0;
 	padding: 20px;
 	background: #111;
-	color: #fff;
 	text-align: center;
+}
+h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+h1 a:hover {
+	text-decoration: underline;
 }
 h2 {
 	margin: 0;
