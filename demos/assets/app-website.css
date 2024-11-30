@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800');
+
+/** reset **/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+button,
+textarea,
+legend,
+caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: inhert;
+	font-style: inhert;
+	vertical-align: baseline;
+	background: transparent;
+}
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	font-weight: normal;
+}
+i,
+em {
+	font-style: normal;
+}
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol,
+ul {
+	list-style: none;
+}
+a,
+a:hover {
+	text-decoration: none;
+}
+
+/** page **/
+
+body {
+	font:
+		15px/1em 'Open Sans',
+		Arial,
+		Verdana,
+		Serif;
+	background: #252525;
+}
+a {
+	color: #000;
+}
+
+.container {
+	box-sizing: border-box;
+	padding: 0 15px;
+}
+@media screen and (min-width: 1050px) {
+	.container {
+		width: 1040px;
+		margin: 0 auto;
+	}
+}
+
+a.link {
+	display: inline-block;
+	padding: 13px 30px;
+	border-radius: 15px;
+	font-weight: 600;
+	transition:
+		background 0.2s,
+		opacity 0.2s;
+	outline: 0;
+}
+a.link:hover {
+	opacity: 0.8;
+}
+a.link.primary {
+	color: #fff;
+	background: #0eccd1;
+	background: linear-gradient(90deg, #0eccd1 0%, #2290b4 100%);
+}
+a.link.secondary {
+	color: #337a86;
+	background: #90ebec;
+	background: linear-gradient(90deg, #90ebec 0%, #98d5e2 100%);
+}
+a.link.white {
+	color: #000;
+	background: #fff;
+	background: linear-gradient(90deg, #fff 0%, #e0fffd 100%);
+}
+
+header {
+	background: #fff;
+	padding: 17px 0;
+}
+header h1 {
+	font-size: 22px;
+	line-height: 1.1em;
+	font-weight: 600;
+	letter-spacing: -0.03em;
+}
+header h1 img {
+	vertical-align: middle;
+}
+header h1 a {
+	padding: 0 8px;
+}
+header nav ul li {
+	display: inline-block;
+	padding: 0 10px;
+}
+header nav ul li a {
+	color: #000;
+}
+header nav ul li a:hover {
+	text-decoration: underline;
+}
+@media screen and (min-width: 1050px) {
+	header .container {
+		display: table;
+	}
+	header h1 {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	header nav {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: right;
+	}
+	html[dir='rtl'] header nav {
+		text-align: left;
+	}
+}
+@media screen and (max-width: 1049.99px) {
+	header {
+		text-align: center;
+	}
+	header nav {
+		padding: 10px 0 12px;
+	}
+}
+
+section.app {
+	background: #e0fffd;
+	padding: 50px 0;
+}
+section.app .info h3 {
+	padding-bottom: 15px;
+	font-size: 40px;
+	line-height: 1.3em;
+	letter-spacing: -0.02em;
+	font-weight: 800;
+}
+section.app .info p {
+	padding: 5px 0;
+	line-height: 1.5em;
+}
+section.app .info ul.links {
+	padding-top: 30px;
+}
+section.app .info ul.links li {
+	padding: 8px 0;
+}
+section.app .preview img {
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 1050px) {
+	section.app .container {
+		display: table;
+	}
+	section.app .info {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	section.app .preview {
+		display: table-cell;
+		width: 1%;
+		padding: 0 20px;
+		vertical-align: middle;
+	}
+}
+@media screen and (max-width: 1049.99px) {
+	section.app .info {
+		text-align: center;
+	}
+	section.app .preview {
+		padding-top: 40px;
+		text-align: center;
+	}
+	section.app .preview img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+section.contact {
+	background: #92e7ea;
+	text-align: center;
+	padding: 50px 0;
+}
+section.contact h3 {
+	padding-bottom: 5px;
+	font-size: 34px;
+	line-height: 1.3em;
+	letter-spacing: -0.02em;
+	font-weight: 800;
+}
+section.contact p {
+	padding: 5px 0;
+	line-height: 1.5em;
+}
+section.contact div.link {
+	padding-top: 25px;
+}
+@media screen and (min-width: 1050px) {
+	section.contact p {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+article {
+	background: #fff;
+	padding: 0 0 30px;
+	line-height: 1.5em;
+}
+article h2,
+article h3,
+article h4 {
+	padding: 10px 0;
+	line-height: 1.3em;
+	letter-spacing: -0.02em;
+	font-weight: 800;
+}
+article h2 {
+	font-size: 34px;
+	padding: 15px 0;
+}
+article h3 {
+	font-size: 24px;
+}
+article h4 {
+	font-size: 17px;
+}
+article p {
+	padding: 10px 0;
+}
+article a {
+	text-decoration: underline;
+}
+article a:hover {
+	text-decoration: none;
+}
+article strong {
+	font-weight: 600;
+}
+article ul {
+	list-style-type: disc;
+	margin: 10px 20px;
+}
+article ol {
+	list-style-type: decimal;
+	margin: 10px 20px;
+}
+article ul ul,
+article ul ol,
+article ol ul,
+article ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+footer {
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+	line-height: 1.5em;
+}
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,69 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font:
+		14px/1.3em 'Open Sans',
+		Arial,
+		Verdana,
+		sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+.workspace {
+	flex: 1;
+}
+#canvas {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+h1 {
+	margin: 0;
+	padding: 20px;
+	background: #111;
+	color: #fff;
+	text-align: center;
+}
+h2 {
+	margin: 0;
+	padding: 10px;
+	background: #333;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.4em;
+	text-align: center;
+}
+.text {
+	padding: 10px;
+}
+.text a {
+	color: #333;
+	text-decoration: underline;
+}
+.text a:hover {
+	text-decoration: none;
+}
+.field {
+	background: #eee;
+	padding: 10px;
+}
+#output {
+	width: 100%;
+	height: 200px;
+	border: 0;
+}
+@media screen and (min-width: 600px) {
+	body {
+		flex-direction: row;
+	}
+	.bar {
+		width: 40vw;
+		max-width: 300px;
+	}
+}

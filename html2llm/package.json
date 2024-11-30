@@ -1,0 +1,53 @@
+{
+	"name": "html2llm",
+	"type": "module",
+	"version": "0.0.1",
+	"author": "b4rtaz",
+	"license": "MIT",
+	"main": "lib/esm/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"clean": "rm -rf lib && rm -rf build && rm -rf dist && rm -rf node_modules/.cache/rollup-plugin-typescript2",
+		"start": "rollup -c --watch",
+		"start:clean": "pnpm clean && npm run start",
+		"build": "pnpm clean && rollup -c",
+		"prettier": "prettier --check ./src",
+		"prettier:fix": "prettier --write ./src",
+		"eslint": "eslint ./src --ext .ts"
+	},
+	"exports": {
+		".": {
+			"types": {
+				"require": "./lib/index.d.ts",
+				"default": "./lib/index.d.ts"
+			},
+			"default": {
+				"require": "./lib/cjs/index.cjs",
+				"default": "./lib/esm/index.js"
+			}
+		}
+	},
+	"files": [
+		"lib/"
+	],
+	"dependencies": {
+		"onnxruntime-web": "^1.19.2"
+	},
+	"peerDependencies": {
+		"onnxruntime-web": "^1.19.2"
+	},
+	"devDependencies": {
+		"tslib": "^2.8.0",
+		"@typescript-eslint/eslint-plugin": "^5.47.0",
+		"@typescript-eslint/parser": "^5.47.0",
+		"@types/jest": "^29.5.3",
+		"typescript": "^5.6.3",
+		"prettier": "^3.3.3",
+		"eslint": "^8.30.0",
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"@rollup/plugin-node-resolve": "^15.3.0",
+		"@rollup/plugin-commonjs": "^28.0.1",
+		"rollup": "^4.20.0"
+	}
+}

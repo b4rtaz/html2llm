@@ -1,0 +1,14 @@
+{
+	"name": "html2llm-workspace",
+	"license": "MIT",
+	"scripts": {
+		"build": "pnpm run -r build",
+		"prettier": "pnpm run -r prettier",
+		"prettier:fix": "pnpm run -r prettier:fix",
+		"eslint": "pnpm run -r eslint",
+		"serve": "http-server -c-1 -a 0.0.0.0 -p 2221 ./"
+	},
+	"devDependencies": {
+		"http-server": "^14.1.1"
+	}
+}

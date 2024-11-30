@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>⭕ Omni Parser Webassembly Demo - html2llm</title>
+		<link href="./assets/omni-parser-webassembly.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="workspace">
+			<canvas id="canvas"></canvas>
+		</div>
+		<div class="bar">
+			<h1>html2llm</h1>
+			<h2>⭕ Omni Parser Webassembly Demo</h2>
+
+			<div class="text">
+				This demo demonstrates how the Omni Parser functions in the browser using WebAssembly. Any image containing UI elements to
+				detect can be used as input.
+			</div>
+			<div class="text">
+				by <a href="https://github.com/b4rtaz">b4rtaz</a> & <a href="https://github.com/microsoft/OmniParser">Microsoft</a>
+			</div>
+
+			<div class="field">
+				Use own image:<br />
+				<input type="file" id="fileInput" accept="image/*" />
+			</div>
+
+			<div class="text">Logger</div>
+
+			<textarea id="output"></textarea>
+		</div>
+
+		<script src="../html2llm/dist/index.umd.js"></script>
+		<script src="./assets/omni-parser-webassembly.js"></script>
+	</body>
+</html>
