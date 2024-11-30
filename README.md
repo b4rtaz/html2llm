@@ -4,8 +4,8 @@ This project is an experiment aimed at converting an HTML website into a format 
 
 Demos:
 
-* Omni Parser WebAssembly
-* App Website
+* [⭕ Omni Parser WebAssembly](https://b4rtaz.github.io/html2llm/omni-parser-webassembly.html)
+* [📺 App Website](https://b4rtaz.github.io/html2llm/app-website.html)
 
 ## 🚧 Idea
 

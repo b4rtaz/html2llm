@@ -13,6 +13,10 @@ importers:
         version: 14.1.1
 
   demos:
+    dependencies:
+      html2llm:
+        specifier: workspace:*
+        version: link:../html2llm
     devDependencies:
       prettier:
         specifier: ^3.3.3

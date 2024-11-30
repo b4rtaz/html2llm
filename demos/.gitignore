@@ -1,2 +1,3 @@
 assets/*.wasm
 assets/*.onnx
+assets/html2llm.js
