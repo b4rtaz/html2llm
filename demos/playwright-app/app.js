@@ -36,6 +36,7 @@ async function main() {
 	});
 	await page.goto(URL);
 
+	console.log('Waiting for page to load');
 	await page.waitForLoadState('networkidle');
 
 	const screenshotBase64 = (

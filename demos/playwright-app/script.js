@@ -1,3 +1,5 @@
+const SHOW_NOT_FOUND = false;
+
 const labels = [];
 let parser = null;
 
@@ -33,21 +35,32 @@ function addLabel(d, color, text) {
 	label.style.width = d.w + 'px';
 	label.style.height = d.h + 'px';
 	label.style.color = `rgb(${color})`;
-	label.style.backgroundColor = `rgba(${color}, 0.15)`;
+	label.style.backgroundColor = `rgba(${color}, 0.25)`;
 	label.style.fontWeight = 'bold';
 	label.style.border = `2px solid rgb(${color})`;
 	label.style.zIndex = '999999999';
+	label.style.overflow = 'hidden';
+	label.title = text;
 	label.innerText = text;
 	labels.push(label);
 	document.body.appendChild(label);
+	label.addEventListener(
+		'click',
+		() => {
+			document.body.removeChild(label);
+		},
+		false
+	);
 }
 
 function showLabels(extractedElements) {
 	for (const fe of extractedElements.foundElements) {
 		addLabel(fe, '255, 0, 0', `${fe.label} (${html2llm.elementTypeToString(fe.type)})`);
 	}
-	for (const b of extractedElements.notFoundBoxes) {
-		addLabel(b, '0, 0, 255', '?');
+	if (SHOW_NOT_FOUND) {
+		for (const b of extractedElements.notFoundBoxes) {
+			addLabel(b, '0, 0, 255', '?');
+		}
 	}
 }
 
@@ -60,31 +73,26 @@ function loadBase64Image(base64) {
 }
 
 window.runHtml2Llm = async screenshot => {
-	try {
-		const image = await loadBase64Image(screenshot);
+	const image = await loadBase64Image(screenshot);
 
-		const canvas = document.createElement('canvas');
-		canvas.width = image.width;
-		canvas.height = image.height;
-		const context = canvas.getContext('2d');
-		context.drawImage(image, 0, 0);
+	const canvas = document.createElement('canvas');
+	canvas.width = image.width;
+	canvas.height = image.height;
+	const context = canvas.getContext('2d');
+	context.drawImage(image, 0, 0);
 
-		if (!parser) {
-			parser = await loadHtml2Llm();
-		}
-		const result = await parser.process(canvas);
-		console.log('result', result);
-
-		const extractedElements = html2llm.ElementExtractor.extract(result, {
-			scrollX: scroll.x,
-			scrollY: scroll.y,
-			customDevicePixelRatio: 1
-		});
-
-		showLabels(extractedElements);
-		console.log('extractedElements', extractedElements);
-	} catch (e) {
-		console.error(e);
-		clearLabels();
+	if (!parser) {
+		parser = await loadHtml2Llm();
 	}
+	const result = await parser.process(canvas);
+	console.log('result', result);
+
+	const extractedElements = html2llm.ElementExtractor.extract(result, {
+		scrollX: scroll.x,
+		scrollY: scroll.y,
+		customDevicePixelRatio: 1
+	});
+
+	showLabels(extractedElements);
+	console.log('extractedElements', extractedElements);
 };
