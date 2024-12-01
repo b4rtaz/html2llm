@@ -1,3 +1,4 @@
 packages:
   - './html2llm'
   - './demos/web-app'
+  - './demos/playwright-app'

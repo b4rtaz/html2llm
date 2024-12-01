@@ -1,5 +1,5 @@
 {
-	"name": "html2llm-demos",
+	"name": "web-app-demo",
 	"private": true,
 	"scripts": {
 		"copy:onnx": "cp ../../html2llm/node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm assets/",

@@ -73,11 +73,19 @@ export class ElementExtractor {
 }
 
 function elementFromPoint(x: number, y: number): Element | null {
+	const cycles = new Set<Document | ShadowRoot>();
 	let root: Document | ShadowRoot | null | undefined = document;
 	let el: Element | null = null;
 	while (root) {
 		el = root.elementFromPoint(x, y);
 		root = el?.shadowRoot;
+		if (root) {
+			if (cycles.has(root)) {
+				console.warn('Cyclic shadow root detected');
+				break;
+			}
+			cycles.add(root);
+		}
 	}
 	return el;
 }

@@ -1,0 +1,16 @@
+{
+	"name": "playwright-app-demo",
+	"private": true,
+	"scripts": {
+		"start": "node app.js",
+		"prettier": "prettier --check ./*.js",
+		"prettier:fix": "prettier --write ./*.js"
+	},
+	"dependencies": {
+		"html2llm": "workspace:*",
+		"playwright": "^1.49.0"
+	},
+	"devDependencies": {
+		"prettier": "^3.3.3"
+	}
+}

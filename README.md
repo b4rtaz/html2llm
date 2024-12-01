@@ -28,6 +28,15 @@ Now we have two problems:
 
 This project is on a very early stage.
 
+## 🚀 How to Run on Any Page?
+
+You can do it by using the [Playwright App Demo](./demos/playwright-app/).
+
+1. Clone the repository.
+2. Install all dependencies `pnpm install`.
+3. Run `cd demos/playwright-app`.
+4. Run `pnpm start <URL>`. For example, `pnpm start https://www.google.com`.
+
 ## 💡 License
 
 This project is released under the MIT license.
