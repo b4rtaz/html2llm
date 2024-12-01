@@ -1,3 +1,5 @@
+![html2llm](.github/cover.png)
+
 # html2llm
 
 This project is an experiment aimed at converting an HTML website into a format understandable by large language models (LLMs). The output can be used for various purposes, such as website navigation or content reading. The project incorporates elements of Microsoft's [OmniParser](https://github.com/microsoft/OmniParser) release and operates in the browser using WebAssembly. Surprisingly, it performs quite efficiently, with inference taking less than 300ms on my Mac M1.
