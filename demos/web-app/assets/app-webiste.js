@@ -48,13 +48,22 @@ function addLabel(d, color, text) {
 	label.style.width = d.w + 'px';
 	label.style.height = d.h + 'px';
 	label.style.color = `rgb(${color})`;
-	label.style.backgroundColor = `rgba(${color}, 0.15)`;
+	label.style.backgroundColor = `rgba(${color}, 0.25)`;
 	label.style.fontWeight = 'bold';
 	label.style.border = `2px solid rgb(${color})`;
-	label.style.zIndex = '999999';
+	label.style.zIndex = '999999999';
+	label.style.overflow = 'hidden';
+	label.title = text;
 	label.innerText = text;
 	labels.push(label);
 	document.body.appendChild(label);
+	label.addEventListener(
+		'click',
+		() => {
+			document.body.removeChild(label);
+		},
+		false
+	);
 }
 
 function showLabels(extractedElements) {
