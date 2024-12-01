@@ -2,9 +2,9 @@
 	"name": "html2llm-demos",
 	"private": true,
 	"scripts": {
-		"copy:onnx": "cp ../html2llm/node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm assets/",
-		"copy:models": "cp ../html2llm/models/* assets/",
-		"copy:html2llm": "cp ../html2llm/dist/index.umd.js assets/html2llm.js",
+		"copy:onnx": "cp ../../html2llm/node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm assets/",
+		"copy:models": "cp ../../html2llm/models/* assets/",
+		"copy:html2llm": "cp ../../html2llm/dist/index.umd.js assets/html2llm.js",
 		"build": "pnpm copy:onnx && pnpm copy:models && pnpm copy:html2llm",
 		"prettier": "prettier --check ./**/*.{html,css,js}",
 		"prettier:fix": "prettier --write ./**/*.{html,css,js}"
